@@ -40,3 +40,14 @@ test('before/after, portfolio and modal interactions work', async ({page}) => {
   await page.getByRole('button',{name:'Политика конфиденциальности'}).click(); await expect(page.getByRole('dialog')).toBeVisible(); await page.getByRole('button',{name:'Закрыть'}).click(); await expect(page.getByRole('dialog')).toBeHidden()
   await expect(page.getByRole('link',{name:'+7 (999) 123-45-67'}).first()).toHaveAttribute('href','tel:+79991234567')
 })
+
+test('Yandex map expands and closes', async ({page}) => {
+  await page.goto('/')
+  const map=page.getByTitle('Интерактивная карта проезда к APEX DETAILING').first()
+  await map.scrollIntoViewIfNeeded()
+  await expect(map).toHaveAttribute('src',/yandex\.ru\/map-widget/)
+  await page.getByRole('button',{name:'Развернуть карту'}).click()
+  await expect(page.getByRole('dialog',{name:'Карта проезда'})).toBeVisible()
+  await page.getByRole('button',{name:'Закрыть карту'}).click()
+  await expect(page.getByRole('dialog',{name:'Карта проезда'})).toBeHidden()
+})
