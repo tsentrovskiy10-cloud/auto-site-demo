@@ -13,10 +13,13 @@ describe('APEX site', () => {
   })
   it('switches real before and after examples for every service', async () => {
     const user=userEvent.setup();render(<App />)
-    expect(screen.getByText(/Чёрный автомобиль · Чистая поверхность/)).toBeInTheDocument()
+    expect(screen.getByText(/Чёрный седан · Дорожная грязь удалена/)).toBeInTheDocument()
+    expect(screen.getByAltText('Детейлинг-мойка: реальное сравнение до и после')).toHaveAttribute('src','/images/comparisons/wash-combined.webp')
     await user.click(screen.getByRole('tab',{name:/Полировка кузова/}))
     expect(screen.getByText(/Чёрный лак · Убрали сетку царапин/)).toBeInTheDocument()
     expect(screen.getByAltText('Полировка кузова: состояние до работ')).toHaveAttribute('src','/images/comparisons/polish-before.webp')
+    await user.click(screen.getByRole('tab',{name:/Защитная PPF-плёнка/}))
+    expect(screen.getByAltText('Защитная PPF-плёнка: реальное сравнение до и после')).toHaveAttribute('src','/images/comparisons/ppf-combined.webp')
   })
   it('opens and closes the mobile menu', async () => {
     const user = userEvent.setup(); render(<App />)

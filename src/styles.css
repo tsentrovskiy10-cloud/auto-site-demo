@@ -22,3 +22,4 @@
 @media(max-width:900px){.compare-tabs{display:flex;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none}.compare-tabs::-webkit-scrollbar{display:none}.compare-tabs button{flex:0 0 180px;scroll-snap-align:start}.compare-tabs button:first-child{padding-left:14px}}
 @media(max-width:700px){.compare-toolbar{padding:0 18px;align-items:center}.compare-toolbar p{font-size:11px;line-height:1.45;max-width:235px}.compare-toolbar h3{font-size:20px}.compare-nav button{width:44px;height:44px}.compare-nav{flex:none}.compare{height:min(72vh,570px)}.compare-tabs{margin-top:16px;padding:0 4px 0 18px}.compare-tabs button{flex-basis:155px;padding:16px 12px}.compare-tabs button:first-child{padding-left:12px}.compare-label{top:16px}.compare-label.left{left:16px}.compare-label.right{right:16px}}
 @media(prefers-reduced-motion:reduce){.compare{animation:none}}
+.compare-static{cursor:default;background:#080906}.compare-static>img{object-fit:contain}
