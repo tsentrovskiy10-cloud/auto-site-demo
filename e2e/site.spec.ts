@@ -41,13 +41,12 @@ test('before/after, portfolio and modal interactions work', async ({page}) => {
   await expect(page.getByRole('link',{name:'+7 (999) 123-45-67'}).first()).toHaveAttribute('href','tel:+79991234567')
 })
 
-test('Yandex map expands and closes', async ({page}) => {
+test('map has a direct expand link to Yandex Maps', async ({page}) => {
   await page.goto('/')
   const map=page.getByTitle('Интерактивная карта проезда к APEX DETAILING').first()
   await map.scrollIntoViewIfNeeded()
   await expect(map).toHaveAttribute('src',/yandex\.ru\/map-widget/)
-  await page.getByRole('button',{name:'Развернуть карту'}).click()
-  await expect(page.getByRole('dialog',{name:'Карта проезда'})).toBeVisible()
-  await page.getByRole('button',{name:'Закрыть карту'}).click()
-  await expect(page.getByRole('dialog',{name:'Карта проезда'})).toBeHidden()
+  const expand=page.getByRole('link',{name:'Открыть карту в Яндекс Картах'})
+  await expect(expand).toHaveAttribute('href',/yandex\.ru\/maps/)
+  await expect(expand).toHaveAttribute('target','_blank')
 })

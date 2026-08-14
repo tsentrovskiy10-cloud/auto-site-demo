@@ -40,13 +40,11 @@ describe('APEX site', () => {
     fireEvent.keyDown(window,{key:'Escape'})
     await waitFor(()=>expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
   })
-  it('shows an interactive Yandex map and expands it', async () => {
-    const user=userEvent.setup();render(<App />)
+  it('shows an interactive map with a link to Yandex Maps', () => {
+    render(<App />)
     expect(screen.getByTitle('Интерактивная карта проезда к APEX DETAILING')).toHaveAttribute('src',expect.stringContaining('yandex.ru/map-widget'))
-    await user.click(screen.getByRole('button',{name:'Развернуть карту'}))
-    expect(screen.getByRole('dialog',{name:'Карта проезда'})).toBeInTheDocument()
-    await user.click(screen.getByRole('button',{name:'Закрыть карту'}))
-    expect(screen.queryByRole('dialog',{name:'Карта проезда'})).not.toBeInTheDocument()
+    expect(screen.getByRole('link',{name:'Открыть карту в Яндекс Картах'})).toHaveAttribute('href',expect.stringContaining('yandex.ru/maps'))
+    expect(screen.getByRole('link',{name:'Открыть карту в Яндекс Картах'})).toHaveAttribute('target','_blank')
   })
 })
 const companyPhone = '+7 (999) 123-45-67'
