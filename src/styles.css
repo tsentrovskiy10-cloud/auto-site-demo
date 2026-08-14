@@ -9,3 +9,4 @@
 @media(max-width:700px){.form-intro{align-items:flex-start;gap:8px}.form-intro span{text-align:right;max-width:130px}.request input,.request select,.request textarea{font-size:16px}.request input::placeholder,.request textarea::placeholder{font-size:13px}}
 .phone-row{display:grid;grid-template-columns:135px minmax(0,1fr);gap:18px;align-items:start}.phone-row label{margin-bottom:0}.phone-row .phone-field{margin-bottom:0}.phone-row .phone-field small{top:58px!important}.phone-hint{margin:7px 0 24px;color:#85867f!important;font-size:9px!important}.country-field select{white-space:nowrap;text-overflow:ellipsis}.phone-row:has(.phone-field small)+.phone-hint{margin-top:23px}
 @media(max-width:700px){.phone-row{grid-template-columns:112px minmax(0,1fr);gap:12px}.country-field select{padding-right:4px;font-size:14px!important}.phone-row input::placeholder{font-size:11px}.phone-hint{line-height:1.5}}
+.phone-row{margin-bottom:24px}
