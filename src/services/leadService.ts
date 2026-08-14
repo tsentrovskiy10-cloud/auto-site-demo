@@ -1,4 +1,4 @@
-export type Lead = { name:string; phone:string; car:string; comment:string; createdAt:string }
+export type Lead = { name:string; phone:string; country:string; car:string; comment:string; createdAt:string }
 
 export const leadService = {
   async submit(data: Omit<Lead, 'createdAt'>) {
