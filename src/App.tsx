@@ -24,15 +24,15 @@ const formatPhone = (raw:string,country:PhoneCountry) => {
 }
 
 const comparisonSlides = [
- {id:'wash',title:'Детейлинг-мойка',car:'Porsche Taycan',result:'Без дорожного налёта и следов реагентов',before:'/images/comparisons/wash-before.webp',after:'/images/comparisons/wash-after.webp'},
+ {id:'wash',title:'Детейлинг-мойка',car:'Чёрный автомобиль',result:'Чистая поверхность без стойкого налёта',before:'/images/comparisons/polish-before.webp',after:'/images/comparisons/polish-after.webp'},
  {id:'polish',title:'Полировка кузова',car:'Чёрный лак',result:'Убрали сетку царапин и вернули глубину цвета',before:'/images/comparisons/polish-before.webp',after:'/images/comparisons/polish-after.webp'},
  {id:'ceramic',title:'Керамическое покрытие',car:'Премиальный седан',result:'Ровный глянец и защищённая поверхность',before:'/images/comparisons/ceramic-before.webp',after:'/images/comparisons/ceramic-after.webp'},
  {id:'interior',title:'Химчистка салона',car:'Светлый салон',result:'Удалили глубокие загрязнения с обивки',before:'/images/comparisons/interior-before.webp',after:'/images/comparisons/interior-after.webp'},
- {id:'ppf',title:'Защитная PPF-плёнка',car:'BMW M5',result:'Монтаж плёнки и незаметная защита кузова',before:'/images/comparisons/ppf-before.webp',after:'/images/comparisons/ppf-after.webp'},
+ {id:'ppf',title:'Защитная PPF-плёнка',car:'Премиальный седан',result:'Незаметная защита и ровный глянец кузова',before:'/images/comparisons/ceramic-before.webp',after:'/images/comparisons/ceramic-after.webp'},
  {id:'service',title:'ТО и диагностика',car:'Моторный отсек',result:'Очистили узлы и провели комплексную проверку',before:'/images/comparisons/engine-before.webp',after:'/images/comparisons/engine-after.webp'},
 ]
 
-function Logo(){ return <button className="logo" onClick={()=>smoothTo('top')} aria-label="На главную"><span className="logo-mark">A</span><span>APEX<small>DETAILING</small></span></button> }
+function Logo(){ return <button className="logo" onClick={()=>window.location.reload()} aria-label="Перезагрузить сайт"><span className="logo-mark">A</span><span>APEX<small>DETAILING</small></span></button> }
 
 function Header(){
   const [open,setOpen]=useState(false)

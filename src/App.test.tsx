@@ -13,7 +13,7 @@ describe('APEX site', () => {
   })
   it('switches real before and after examples for every service', async () => {
     const user=userEvent.setup();render(<App />)
-    expect(screen.getByText(/Porsche Taycan · Без дорожного налёта/)).toBeInTheDocument()
+    expect(screen.getByText(/Чёрный автомобиль · Чистая поверхность/)).toBeInTheDocument()
     await user.click(screen.getByRole('tab',{name:/Полировка кузова/}))
     expect(screen.getByText(/Чёрный лак · Убрали сетку царапин/)).toBeInTheDocument()
     expect(screen.getByAltText('Полировка кузова: состояние до работ')).toHaveAttribute('src','/images/comparisons/polish-before.webp')
