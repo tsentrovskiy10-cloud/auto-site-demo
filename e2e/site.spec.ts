@@ -36,7 +36,6 @@ test('hero CTA and form validation/success work', async ({page}) => {
 
 test('before/after, portfolio and modal interactions work', async ({page}) => {
   await page.goto('/')
-  await page.getByRole('tab',{name:/Полировка кузова/}).click()
   const compare=page.locator('.compare'); await compare.scrollIntoViewIfNeeded(); const box=await compare.boundingBox();
   if(box){await page.mouse.move(box.x+box.width*.25,box.y+box.height/2);await page.mouse.down();await page.mouse.move(box.x+box.width*.7,box.y+box.height/2);await page.mouse.up();expect(await page.locator('.before').getAttribute('style')).toContain('70')}
   await page.getByRole('tab',{name:/Химчистка салона/}).click()
