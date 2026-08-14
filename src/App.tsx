@@ -69,4 +69,15 @@ function LegalModal({type,onClose}:{type:'privacy'|'terms',onClose:()=>void}){co
 
 function Footer(){const [legal,setLegal]=useState<'privacy'|'terms'|null>(null);return <footer><div className="footer-top"><Logo/><p>Премиальный детейлинг и<br/>технический уход в Москве.</p><nav>{nav.map(([l,id])=><button key={id} onClick={()=>smoothTo(id)}>{l}</button>)}</nav><div><a href={company.phoneHref}>{company.phone}</a><span>{company.hours}</span></div></div><div className="footer-bottom"><span>© 2026 APEX DETAILING</span><div><button onClick={()=>setLegal('privacy')}>Политика конфиденциальности</button><button onClick={()=>setLegal('terms')}>Пользовательское соглашение</button></div><button onClick={()=>smoothTo('top')}>Наверх <ArrowDown/></button></div>{legal&&<LegalModal type={legal} onClose={()=>setLegal(null)}/>}</footer>}
 
-export default function App(){return <><Header/><main><Hero/><Services/><About/><BeforeAfter/><Portfolio/><Process/><Reviews/><LeadForm/><Contacts/></main><Footer/></>}
+export default function App(){
+ useEffect(()=>{
+  const nodes=[...document.querySelectorAll<HTMLElement>('.section-head,.service-card,.about-visual,.about-copy,.compare,.work-card,.steps>div,.review-stage,.request-copy,.request form,.contact-grid')]
+  document.documentElement.classList.add('motion-enabled')
+  nodes.forEach((node,index)=>{node.classList.add('motion-reveal');node.style.setProperty('--reveal-delay',`${(index%6)*65}ms`)})
+  if(!('IntersectionObserver' in window)){nodes.forEach(node=>node.classList.add('is-visible'));return}
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -5% 0px'})
+  nodes.forEach(node=>observer.observe(node))
+  return()=>{observer.disconnect();document.documentElement.classList.remove('motion-enabled')}
+ },[])
+ return <><Header/><main><Hero/><Services/><About/><BeforeAfter/><Portfolio/><Process/><Reviews/><LeadForm/><Contacts/></main><Footer/></>
+}
