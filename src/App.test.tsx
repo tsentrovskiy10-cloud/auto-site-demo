@@ -7,9 +7,16 @@ describe('APEX site', () => {
   it('renders the main content and services', () => {
     render(<App />)
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Автомобиль')
-    expect(screen.getByText('Детейлинг-мойка')).toBeInTheDocument()
+    expect(screen.getAllByText('Детейлинг-мойка').length).toBeGreaterThan(0)
     expect(screen.getByText('Porsche 911 Carrera')).toBeInTheDocument()
     expect(screen.getAllByRole('link', { name: companyPhone })[0]).toHaveAttribute('href', 'tel:+79991234567')
+  })
+  it('switches real before and after examples for every service', async () => {
+    const user=userEvent.setup();render(<App />)
+    expect(screen.getByText(/Porsche Taycan · Без дорожного налёта/)).toBeInTheDocument()
+    await user.click(screen.getByRole('tab',{name:/Полировка кузова/}))
+    expect(screen.getByText(/Чёрный лак · Убрали сетку царапин/)).toBeInTheDocument()
+    expect(screen.getByAltText('Полировка кузова: состояние до работ')).toHaveAttribute('src','/images/comparisons/polish-before.webp')
   })
   it('opens and closes the mobile menu', async () => {
     const user = userEvent.setup(); render(<App />)

@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test'
 test('loads, navigates and has no horizontal overflow', async ({page},testInfo) => {
   await page.goto('/')
   await expect(page.getByRole('heading',{level:1})).toContainText('Автомобиль')
-  await expect(page.getByText('Детейлинг-мойка')).toBeVisible()
+  await expect(page.getByText('Детейлинг-мойка').first()).toBeVisible()
   await expect(page.getByText('Porsche 911 Carrera')).toBeVisible()
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth)
   expect(overflow).toBeLessThanOrEqual(1)
@@ -38,6 +38,8 @@ test('before/after, portfolio and modal interactions work', async ({page}) => {
   await page.goto('/')
   const compare=page.locator('.compare'); await compare.scrollIntoViewIfNeeded(); const box=await compare.boundingBox();
   if(box){await page.mouse.move(box.x+box.width*.25,box.y+box.height/2);await page.mouse.down();await page.mouse.move(box.x+box.width*.7,box.y+box.height/2);await page.mouse.up();expect(await page.locator('.before').getAttribute('style')).toContain('70')}
+  await page.getByRole('tab',{name:/Химчистка салона/}).click()
+  await expect(page.getByAltText('Химчистка салона: результат после работ')).toBeVisible()
   await page.getByRole('button',{name:/Porsche 911 Carrera/}).click(); await expect(page.getByRole('dialog',{name:'Porsche 911 Carrera'})).toBeVisible(); await page.keyboard.press('Escape'); await expect(page.getByRole('dialog',{name:'Porsche 911 Carrera'})).toBeHidden()
   await page.getByRole('button',{name:'Политика конфиденциальности'}).click(); await expect(page.getByRole('dialog')).toBeVisible(); await page.getByRole('button',{name:'Закрыть'}).click(); await expect(page.getByRole('dialog')).toBeHidden()
   await expect(page.getByRole('link',{name:'+7 (999) 123-45-67'}).first()).toHaveAttribute('href','tel:+79991234567')
