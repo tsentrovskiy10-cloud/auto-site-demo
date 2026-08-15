@@ -37,7 +37,7 @@ test('hero CTA and form validation/success work', async ({page}) => {
 test('before/after, portfolio and modal interactions work', async ({page}) => {
   await page.goto('/')
   const compare=page.locator('.compare'); await compare.scrollIntoViewIfNeeded(); const box=await compare.boundingBox();
-  if(box){await page.mouse.move(box.x+box.width*.25,box.y+box.height/2);await page.mouse.down();await page.mouse.move(box.x+box.width*.7,box.y+box.height/2);await page.mouse.up();expect(await page.locator('.before').getAttribute('style')).toContain('70')}
+  if(box){await page.mouse.move(box.x+box.width*.25,box.y+box.height/2);await page.mouse.down();await page.mouse.move(box.x+box.width*.7,box.y+box.height/2);await page.mouse.up();const style=(await page.locator('.before').getAttribute('style'))??'';const position=Number(style.match(/[\d.]+/)?.[0]);expect(position).toBeGreaterThan(69);expect(position).toBeLessThan(71)}
   await page.getByRole('tab',{name:/Химчистка салона/}).click()
   await expect(page.getByAltText('Химчистка салона: результат после работ')).toBeVisible()
   await page.getByRole('button',{name:/Porsche 911 Carrera/}).click(); await expect(page.getByRole('dialog',{name:'Porsche 911 Carrera'})).toBeVisible(); await page.keyboard.press('Escape'); await expect(page.getByRole('dialog',{name:'Porsche 911 Carrera'})).toBeHidden()

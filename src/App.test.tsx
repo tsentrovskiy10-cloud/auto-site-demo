@@ -67,5 +67,10 @@ describe('APEX site', () => {
     expect(screen.getByRole('link',{name:'Открыть карту в Яндекс Картах'})).toHaveAttribute('href',expect.stringContaining('yandex.ru/maps'))
     expect(screen.getByRole('link',{name:'Открыть карту в Яндекс Картах'})).toHaveAttribute('target','_blank')
   })
+  it('renders search-friendly FAQ content', () => {
+    render(<App />)
+    expect(screen.getByRole('heading',{name:'Какие услуги выполняет APEX DETAILING?'})).toBeInTheDocument()
+    expect(screen.getByText(/Детейлинг-мойка начинается от 2 500 ₽/)).toBeInTheDocument()
+  })
 })
 const companyPhone = '+7 (999) 123-45-67'
