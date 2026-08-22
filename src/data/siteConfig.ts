@@ -7,12 +7,12 @@ export const company = {
 }
 
 export const services = [
-  { id:'interior', n:'01', title:'Химчистка салона', text:'Глубокая очистка сидений, пола, потолка, пластика и труднодоступных зон.', price:'от 5 000 ₽', image:'/images/zenit/zenit-6.jpg' },
-  { id:'wash', n:'02', title:'Двухфазная мойка', text:'Кузов, уплотнители, арки и проёмы, бережная сушка и продувка салона.', price:'2 300 ₽', image:'/images/zenit/zenit-2.jpg' },
-  { id:'wash-plus', n:'03', title:'Трёхфазная мойка', text:'Многоэтапная мойка с нанесением выбранного защитного состава на кузов.', price:'3 200 ₽', image:'/images/zenit/zenit-7.jpg' },
-  { id:'leather', n:'04', title:'Детейлинг кожи', text:'Деликатная очистка светлой кожи, швов и элементов салона с заметной разницей.', price:'по расчёту', image:'/images/zenit/zenit-9.jpg' },
-  { id:'polish', n:'05', title:'Полировка кузова', text:'Возвращаем глубину цвета, убираем паутинку, мелкие риски и голограммы.', price:'по расчёту', image:'/images/zenit/zenit-2.jpg' },
-  { id:'complex', n:'06', title:'Комплексный уход', text:'Кузов и салон в одном визите — состав работ подбирается после осмотра.', price:'по расчёту', image:'/images/zenit/zenit-8.jpg' },
+  { id:'interior', n:'01', title:'Химчистка салона', text:'Глубокая очистка сидений, пола, потолка, пластика и труднодоступных зон.', price:'от 5 000 ₽', image:'./images/zenit/zenit-6.jpg' },
+  { id:'wash', n:'02', title:'Двухфазная мойка', text:'Кузов, уплотнители, арки и проёмы, бережная сушка и продувка салона.', price:'2 300 ₽', image:'./images/zenit/zenit-2.jpg' },
+  { id:'wash-plus', n:'03', title:'Трёхфазная мойка', text:'Многоэтапная мойка с нанесением выбранного защитного состава на кузов.', price:'3 200 ₽', image:'./images/zenit/zenit-7.jpg' },
+  { id:'leather', n:'04', title:'Детейлинг кожи', text:'Деликатная очистка светлой кожи, швов и элементов салона с заметной разницей.', price:'по расчёту', image:'./images/zenit/zenit-9.jpg' },
+  { id:'polish', n:'05', title:'Полировка кузова', text:'Возвращаем глубину цвета, убираем паутинку, мелкие риски и голограммы.', price:'по расчёту', image:'./images/zenit/zenit-2.jpg' },
+  { id:'complex', n:'06', title:'Комплексный уход', text:'Кузов и салон в одном визите — состав работ подбирается после осмотра.', price:'по расчёту', image:'./images/zenit/zenit-8.jpg' },
 ]
 
 export const benefits = [
@@ -23,12 +23,12 @@ export const benefits = [
 ]
 
 export const projects = [
-  {car:'Jeep Grand Cherokee', service:'Полная химчистка', result:'Светлый салон восстановлен после сложных загрязнений', image:'/images/zenit/zenit-6.jpg'},
-  {car:'Porsche Macan', service:'Детейлинг кузова', result:'Чистый кузов, диски и выразительный глянец', image:'/images/zenit/zenit-2.jpg'},
-  {car:'Светлый кожаный салон', service:'Очистка кожи', result:'Разница в оттенке и чистоте без ретуши', image:'/images/zenit/zenit-3.jpg'},
-  {car:'Jeep Grand Cherokee', service:'Детейлинг интерьера', result:'Чистые поверхности и восстановленный светлый оттенок', image:'/images/zenit/zenit-8.jpg'},
-  {car:'Jeep Grand Cherokee', service:'Комплексный уход', result:'Автомобиль готов к выдаче владельцу', image:'/images/zenit/zenit-7.jpg'},
-  {car:'Светлая кожа', service:'Глубокая очистка', result:'Сиденья очищены с вниманием к швам и фактуре', image:'/images/zenit/zenit-9.jpg'},
+  {car:'Jeep Grand Cherokee', service:'Полная химчистка', result:'Светлый салон восстановлен после сложных загрязнений', image:'./images/zenit/zenit-6.jpg'},
+  {car:'Porsche Macan', service:'Детейлинг кузова', result:'Чистый кузов, диски и выразительный глянец', image:'./images/zenit/zenit-2.jpg'},
+  {car:'Светлый кожаный салон', service:'Очистка кожи', result:'Разница в оттенке и чистоте без ретуши', image:'./images/zenit/zenit-3.jpg'},
+  {car:'Jeep Grand Cherokee', service:'Детейлинг интерьера', result:'Чистые поверхности и восстановленный светлый оттенок', image:'./images/zenit/zenit-8.jpg'},
+  {car:'Jeep Grand Cherokee', service:'Комплексный уход', result:'Автомобиль готов к выдаче владельцу', image:'./images/zenit/zenit-7.jpg'},
+  {car:'Светлая кожа', service:'Глубокая очистка', result:'Сиденья очищены с вниманием к швам и фактуре', image:'./images/zenit/zenit-9.jpg'},
 ]
 
 export const reviews = [
