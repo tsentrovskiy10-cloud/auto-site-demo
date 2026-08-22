@@ -2,7 +2,7 @@ name: Publish ZENIT GARAGE
 
 on:
   push:
-    branches: [main]
+    branches: [main, gh-pages]
   workflow_dispatch:
 
 permissions:
