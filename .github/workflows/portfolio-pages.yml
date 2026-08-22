@@ -23,22 +23,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
+        if: github.ref_name == 'main'
         with:
           version: 11
       - uses: actions/setup-node@v4
+        if: github.ref_name == 'main'
         with:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+        if: github.ref_name == 'main'
       - run: pnpm build
+        if: github.ref_name == 'main'
       - name: Normalize image paths for project hosting
+        if: github.ref_name == 'main'
         run: perl -0pi -e 's#(?:\.\.?/|/)images/#./images/#g' dist/assets/*.js
       - uses: actions/configure-pages@v5
         with:
           enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: ${{ github.ref_name == 'gh-pages' && '.' || 'dist' }}
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
