@@ -1,18 +1,18 @@
 export const company = {
   name: 'ZENIT GARAGE', phone: '+7 (920) 060-52-07', phoneHref: 'tel:+79200605207',
-  address: 'Дзержинск, Студенческая ул., 28А/1', hours: 'Ежедневно до 20:00',
+  address: 'Дзержинск, Студенческая ул., 28Б', hours: 'Ежедневно 10:00–20:00 · по записи',
   telegram: 'https://vk.ru/zenit_garage',
   whatsapp: 'https://vk.me/zenit_garage',
   maps: 'https://yandex.ru/maps/?text=%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%2028%D0%90%2F1',
 }
 
 export const services = [
-  { id:'polish', n:'01', title:'Полировка кузова', text:'Возвращаем глубину цвета, убираем паутинку, мелкие риски и голограммы.', price:'от 3 000 ₽', image:'/images/service-polish.jpg' },
-  { id:'interior', n:'02', title:'Химчистка салона', text:'Глубокая очистка сидений, пола, потолка, пластика и труднодоступных зон.', price:'от 2 500 ₽', image:'/images/service-interior.jpg' },
-  { id:'wash', n:'03', title:'Детейлинг-мойка', text:'Бережная многоэтапная очистка кузова, дисков, арок и дверных проёмов.', price:'по расчёту', image:'/images/service-wash.jpg' },
-  { id:'ceramic', n:'04', title:'Защита кузова', text:'Керамика, твёрдый воск и гидрофобные составы для блеска и лёгкого ухода.', price:'по расчёту', image:'/images/service-ceramic.jpg' },
-  { id:'ppf', n:'05', title:'Защитная плёнка', text:'Оклейка зон риска от сколов, дорожного песка и следов ежедневной эксплуатации.', price:'по расчёту', image:'/images/service-ppf.jpg' },
-  { id:'gift', n:'06', title:'Подарочный сертификат', text:'Готовый подарок автолюбителю на услуги студии ZENIT GARAGE.', price:'от 2 000 ₽', image:'/images/service-maintenance.jpg' },
+  { id:'interior', n:'01', title:'Химчистка салона', text:'Глубокая очистка сидений, пола, потолка, пластика и труднодоступных зон.', price:'от 5 000 ₽', image:'/images/zenit/zenit-6.jpg' },
+  { id:'wash', n:'02', title:'Двухфазная мойка', text:'Кузов, уплотнители, арки и проёмы, бережная сушка и продувка салона.', price:'2 300 ₽', image:'/images/zenit/zenit-2.jpg' },
+  { id:'wash-plus', n:'03', title:'Трёхфазная мойка', text:'Многоэтапная мойка с нанесением выбранного защитного состава на кузов.', price:'3 200 ₽', image:'/images/zenit/zenit-7.jpg' },
+  { id:'leather', n:'04', title:'Детейлинг кожи', text:'Деликатная очистка светлой кожи, швов и элементов салона с заметной разницей.', price:'по расчёту', image:'/images/zenit/zenit-9.jpg' },
+  { id:'polish', n:'05', title:'Полировка кузова', text:'Возвращаем глубину цвета, убираем паутинку, мелкие риски и голограммы.', price:'по расчёту', image:'/images/zenit/zenit-2.jpg' },
+  { id:'complex', n:'06', title:'Комплексный уход', text:'Кузов и салон в одном визите — состав работ подбирается после осмотра.', price:'по расчёту', image:'/images/zenit/zenit-8.jpg' },
 ]
 
 export const benefits = [
@@ -23,12 +23,12 @@ export const benefits = [
 ]
 
 export const projects = [
-  {car:'Porsche 911 Carrera', service:'Полировка + керамика', result:'Глубина цвета и защита на 24 месяца', image:'/images/work-porsche.jpg'},
-  {car:'BMW M4 Competition', service:'Полная оклейка PPF', result:'Невидимая защита заводского лака', image:'/images/work-bmw.jpg'},
-  {car:'Mercedes-AMG GT', service:'Детейлинг кузова', result:'Удалены голограммы и мелкие риски', image:'/images/work-mercedes.jpg'},
-  {car:'Range Rover Sport', service:'Химчистка салона', result:'Светлый салон снова в заводском виде', image:'/images/work-range.jpg'},
-  {car:'Audi RS6 Avant', service:'Керамика + антидождь', result:'Выразительный блеск и гидрофоб', image:'/images/work-audi.jpg'},
-  {car:'Lexus RX', service:'Комплексный уход', result:'Кузов и салон подготовлены к сезону', image:'/images/work-lexus.jpg'},
+  {car:'Jeep Grand Cherokee', service:'Полная химчистка', result:'Светлый салон восстановлен после сложных загрязнений', image:'/images/zenit/zenit-6.jpg'},
+  {car:'Porsche Macan', service:'Детейлинг кузова', result:'Чистый кузов, диски и выразительный глянец', image:'/images/zenit/zenit-2.jpg'},
+  {car:'Светлый кожаный салон', service:'Очистка кожи', result:'Разница в оттенке и чистоте без ретуши', image:'/images/zenit/zenit-3.jpg'},
+  {car:'Jeep Grand Cherokee', service:'Детейлинг интерьера', result:'Чистые поверхности и восстановленный светлый оттенок', image:'/images/zenit/zenit-8.jpg'},
+  {car:'Jeep Grand Cherokee', service:'Комплексный уход', result:'Автомобиль готов к выдаче владельцу', image:'/images/zenit/zenit-7.jpg'},
+  {car:'Светлая кожа', service:'Глубокая очистка', result:'Сиденья очищены с вниманием к швам и фактуре', image:'/images/zenit/zenit-9.jpg'},
 ]
 
 export const reviews = [
