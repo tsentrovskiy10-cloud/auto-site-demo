@@ -252,7 +252,7 @@
   }
   .svc::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,7,9,.05) 0%,rgba(6,7,9,.45) 58%,rgba(6,7,9,.94) 100%);}
   .svc-photo::before{content:none;}
-  .svc-photo{padding:0;}
+  .svc-photo{padding:0;aspect-ratio:3/2;background-size:contain;background-repeat:no-repeat;background-color:#08090b;}
   .svc-badge{width:18px;height:18px;color:#eef0f2;position:relative;z-index:1;opacity:.85;}
   .svc-body{position:relative;z-index:1;}
   .svc-title{font-family:"Unbounded",sans-serif;font-weight:700;font-size:13.5px;text-transform:uppercase;letter-spacing:.01em;line-height:1.2;margin-bottom:4px;}
@@ -308,8 +308,9 @@
   .phone .vk-tiles .tile{padding:8px;border-radius:10px;}
   .phone .vk-tiles .tile-line{width:16px;margin-bottom:6px;}
   .phone .vk-tiles .tile-label{font-size:9.5px;}
-  .phone .vk-services{grid-template-columns:1fr 1fr;gap:8px;}
+  .phone .vk-services{grid-template-columns:1fr;gap:8px;}
   .phone .svc{aspect-ratio:1/1.05;padding:11px;}
+  .phone .svc-photo{aspect-ratio:3/2;}
   .phone .svc-title{font-size:12px;margin-bottom:3px;}
   .phone .svc-desc{font-size:9.5px;}
 
