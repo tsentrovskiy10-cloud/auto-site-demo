@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090a0c">
+  <title>UnderGround — автозвук и шумоизоляция в Ярославле</title>
+  <meta name="description" content="Персональная концепция сайта UnderGround: автозвук, шумоизоляция, Android-магнитолы и дополнительное оборудование в Ярославле.">
+  <meta property="og:title" content="UnderGround — студия автозвука">
+  <meta property="og:description" content="Автозвук и профессиональная шумоизоляция в Ярославле.">
+  <meta property="og:image" content="team.jpg">
+  <script>document.documentElement.classList.add('js')</script>
+  <style>
+    :root{--bg:#090a0c;--panel:#111318;--line:#272a31;--text:#f5f5f2;--muted:#a7a9af;--accent:#f3b33d;--max:1560px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button,a{tap-highlight-color:transparent}
+    .wrap{width:min(var(--max),calc(100% - clamp(32px,7vw,140px)));margin:auto}.nav{position:sticky;top:0;z-index:20;background:rgba(9,10,12,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav-in{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:14px}.brand img{width:132px;height:46px;object-fit:contain;background:white;border-radius:7px;padding:5px}.brand span{font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
+    .links{display:flex;gap:28px;color:#d5d6d9;font-size:14px}.links a{position:relative}.links a:after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:2px;background:var(--accent);transition:right .25s}.links a:hover:after,.links a:focus-visible:after{right:0}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:12px;font-weight:750;transition:transform .25s,box-shadow .25s,border-color .25s}.nav-cta{background:var(--accent);color:#15110a}.btn.primary{background:var(--accent);color:#171209}.btn.secondary{border:1px solid #4a4e57;background:rgba(255,255,255,.03)}.nav-cta:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 14px 35px rgba(0,0,0,.28)}.btn.secondary:hover{border-color:#8a744b}
+    .hero{min-height:calc(100svh - 78px);padding:70px 0;display:grid;align-items:center;position:relative;isolation:isolate}.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 82% 30%,rgba(243,179,61,.14),transparent 29%),linear-gradient(110deg,#090a0c 43%,#11141a)}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(420px,.84fr);gap:clamp(64px,7vw,124px);align-items:center}.hero-copy{max-width:870px}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#f4c66f;text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:800}.eyebrow:before{content:"";width:30px;height:2px;background:var(--accent)}
+    h1{max-width:13ch;font-size:clamp(56px,5.1vw,94px);line-height:.94;letter-spacing:-.055em;margin:24px 0;text-wrap:balance}h1 span{color:#dedfdc}.lead{font-size:clamp(17px,1.35vw,22px);line-height:1.55;color:#c2c4c8;max-width:760px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:34px 0 12px}.microcopy{margin:0;color:#858890;font-size:12px}.proof{display:flex;gap:clamp(24px,3vw,44px);flex-wrap:wrap;margin-top:38px}.proof b{display:block;font-size:21px}.proof span{font-size:13px;color:var(--muted)}
+    .visual{position:relative;width:100%;max-width:610px;justify-self:end}.team{display:block;width:100%;max-height:650px;aspect-ratio:5/6;object-fit:cover;border-radius:24px;filter:saturate(.9) contrast(1.03);transition:transform .6s,filter .6s}.visual:hover .team{transform:scale(1.012);filter:saturate(1) contrast(1.04)}.visual:after{content:"";position:absolute;inset:auto -18px -18px 24px;height:55%;border:1px solid rgba(243,179,61,.38);border-radius:24px;z-index:-1}.stamp{position:absolute;left:-25px;bottom:45px;background:#f4f0e7;color:#111;padding:16px 20px;border-radius:15px;font-weight:800;box-shadow:0 18px 50px #0008}.stamp small{display:block;font-size:11px;letter-spacing:.08em;color:#6c6251;margin-top:5px}
+    section{padding:110px 0;scroll-margin-top:78px}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}.kicker{color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase}h2{font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-.04em;margin:12px 0 0}.section-head p{max-width:500px;color:var(--muted);line-height:1.6}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{min-height:290px;padding:clamp(24px,2vw,34px);border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#15171c,#0e1014);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s}.card:before{content:"";position:absolute;width:150px;height:150px;right:-80px;top:-90px;border-radius:50%;background:rgba(243,179,61,.08);transition:transform .5s}.card:hover{transform:translateY(-7px);border-color:#6d5935;box-shadow:0 24px 55px #0006}.card:hover:before{transform:scale(1.8)}.num{font-size:12px;color:#d9aa52}.card h3{font-size:clamp(22px,1.55vw,27px);margin:44px 0 14px}.card p{color:var(--muted);line-height:1.55;font-size:14px;margin:0}.card a{margin-top:auto;color:#f2c776;font-weight:700;font-size:14px}
+    .about{background:#f0eee8;color:#111}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.about h2{max-width:520px}.about p{color:#5d5b56;line-height:1.7}.ticks{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:28px}.tick{padding:18px;border-top:1px solid #c7c3b9;font-weight:700}.tick span{color:#a66c0b;margin-right:8px}
+    .contact{padding:100px 0}.contact-box{background:var(--panel);border:1px solid var(--line);border-radius:26px;padding:clamp(28px,6vw,70px);display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}.contact-box p{color:var(--muted);line-height:1.6}.contact-list{display:grid;gap:11px}.contact-list a{padding:18px 20px;border-radius:12px;border:1px solid #343740;background:#17191e;font-weight:700}.contact-list a:first-child{background:var(--accent);color:#16110a;border-color:var(--accent)}
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}.js .reveal.visible{opacity:1;transform:none}.js .hero .reveal{opacity:1;transform:none}.js .delay-1{transition-delay:.12s}.js .delay-2{transition-delay:.2s}.mobile-actions{display:none}
+    footer{border-top:1px solid var(--line);padding:30px 0;color:#858890;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px}.demo{color:#d3a64f}
+    @media(max-width:1100px){.hero-grid{grid-template-columns:minmax(0,1fr) minmax(360px,.72fr);gap:48px}h1{font-size:clamp(50px,6vw,72px)}.services{grid-template-columns:1fr 1fr}.visual{max-width:520px}}
+    @media(max-width:820px){.links{display:none}.hero{padding:68px 0;min-height:auto}.hero-grid,.about-grid,.contact-box{grid-template-columns:1fr}.visual{max-width:620px;margin:10px auto 0;justify-self:center}.team{aspect-ratio:4/3;max-height:none}.services{grid-template-columns:1fr 1fr}.section-head{display:block}.stamp{left:12px}.about-grid{gap:40px}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,var(--max))}.nav-in{height:68px}.brand img{width:108px;height:40px}.brand span{display:none}.nav-cta{min-height:42px;padding:0 14px;font-size:13px}.hero{padding:54px 0 66px}.hero-grid{gap:44px}h1{font-size:clamp(40px,12.5vw,56px);max-width:none}.lead{font-size:17px}.actions{display:grid}.actions .btn{width:100%}.proof{gap:18px}.proof>div{width:calc(50% - 10px)}.proof b{font-size:18px}.visual{width:calc(100% - 8px)}.team{aspect-ratio:4/5}.stamp{right:10px;left:10px;bottom:18px;padding:13px 15px}.services{grid-template-columns:1fr}.card{min-height:240px}.ticks{grid-template-columns:1fr}section{padding:78px 0}.contact{padding-bottom:104px}.foot{display:block}.foot span{display:block;margin-top:8px}.mobile-actions{position:fixed;display:grid;grid-template-columns:1fr 1fr;gap:8px;z-index:30;left:10px;right:10px;bottom:10px;padding:8px;background:rgba(17,19,24,.92);backdrop-filter:blur(18px);border:1px solid #343740;border-radius:16px;box-shadow:0 12px 45px #000b}.mobile-actions a{min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:var(--accent);color:#171209;font-size:13px;font-weight:800}.mobile-actions a+ a{background:#23262d;color:#fff}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.btn,.nav-cta,.team,.reveal{transition:none!important}.js .reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="#top" aria-label="UnderGround, наверх"><img src="logo.jpg" alt="UnderGround — студия автозвука"><span>Ярославль</span></a>
+      <nav class="links" aria-label="Навигация"><a href="#services">Услуги</a><a href="#experience">Опыт</a><a href="#contacts">Контакты</a></nav>
+      <a class="nav-cta" href="#contacts">Обсудить проект</a>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Персональная концепция</div>
+          <h1>Звук, который ощущается. <span>Тишина, которую замечаешь.</span></h1>
+          <p class="lead">Автозвук, профессиональная шумоизоляция и дополнительное оборудование в Ярославле. С 2014 года — аккуратно, продуманно и с ответственностью за результат.</p>
+          <div class="actions"><a class="btn primary" href="#services">Выбрать направление</a><a class="btn secondary" href="https://vk.com/underground_avtozvuk_yaroslavl" target="_blank" rel="noopener">Написать ВКонтакте</a></div>
+          <p class="microcopy">Ответим на вопросы и предварительно сориентируем без навязчивых звонков</p>
+          <div class="proof"><div><b>С 2014 года</b><span>работаем с автомобилями</span></div><div><b>Гарантия</b><span>на выполненные работы</span></div><div><b>Чемпионский опыт</b><span>в автозвуке</span></div></div>
+        </div>
+        <div class="visual reveal delay-1"><img class="team" src="team.jpg" alt="Команда UnderGround с наградами соревнований по автозвуку"><div class="stamp">Команда, которая слышит детали<small>UNDERGROUND • ЯРОСЛАВЛЬ</small></div></div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="kicker">Направления</div><h2>Не просто оборудование.<br>Продуманный результат.</h2></div><p>Подбираем решение под автомобиль, задачу и бюджет — от более тихого салона до выразительной аудиосистемы.</p></div>
+        <div class="services">
+          <article class="card reveal"><span class="num">01</span><h3>Автозвук</h3><p>Подбор, установка и настройка компонентов с учётом салона и ваших музыкальных предпочтений.</p><a href="#contacts">Обсудить систему →</a></article>
+          <article class="card reveal delay-1"><span class="num">02</span><h3>Шумоизоляция</h3><p>Комплексная обработка автомобиля и отдельных зон для большего акустического комфорта.</p><a href="#contacts">Рассчитать работу →</a></article>
+          <article class="card reveal delay-2"><span class="num">03</span><h3>Android-системы</h3><p>Современные головные устройства, интеграция функций и аккуратная установка.</p><a href="#contacts">Подобрать решение →</a></article>
+          <article class="card reveal delay-2"><span class="num">04</span><h3>Дооснащение</h3><p>Камеры обзора, подсветка салона и полезное дополнительное оборудование.</p><a href="#contacts">Задать вопрос →</a></article>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="experience">
+      <div class="wrap about-grid reveal">
+        <div><div class="kicker">Почему UnderGround</div><h2>Опыт подтверждён не словами.</h2></div>
+        <div><p>За каждым проектом стоят знания, точность сборки и команда, которая участвует в профильных соревнованиях. Мы показываем процесс, объясняем варианты решения и заранее согласовываем результат.</p><div class="ticks"><div class="tick"><span>✓</span>Профильный опыт с 2014 года</div><div class="tick"><span>✓</span>Бережная работа с салоном</div><div class="tick"><span>✓</span>Честный подбор компонентов</div><div class="tick"><span>✓</span>Ответственность за сроки</div></div></div>
+      </div>
+    </section>
+    <section class="contact" id="contacts">
+      <div class="wrap contact-box reveal">
+        <div><div class="kicker">Контакты</div><h2>Расскажите, какой результат хотите получить</h2><p>Подскажем подходящий формат работ и предварительно сориентируем по решению. Ярославль, проспект Толбухина, 1А.</p></div>
+        <div class="contact-list"><a href="tel:+79619749351">Позвонить: +7 961 974-93-51</a><a href="https://vk.com/underground_avtozvuk_yaroslavl" target="_blank" rel="noopener">Открыть сообщество VK</a><a href="https://yandex.ru/profile/231094705633" target="_blank" rel="noopener">Отзывы и маршрут в Яндекс Картах</a></div>
+      </div>
+    </section>
+  </main>
+  <div class="mobile-actions" aria-label="Быстрые действия"><a href="tel:+79619749351">Позвонить</a><a href="https://vk.com/underground_avtozvuk_yaroslavl" target="_blank" rel="noopener">Написать VK</a></div>
+  <footer><div class="wrap foot"><span>© UnderGround, студия автозвука</span><span class="demo">Персональная демонстрационная концепция</span></div></footer>
+  <script>
+    const items = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    }), { threshold: .12 });
+    items.forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>
