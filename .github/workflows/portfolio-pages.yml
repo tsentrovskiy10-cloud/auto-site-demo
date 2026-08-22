@@ -1,8 +1,8 @@
-name: Publish portfolio demos
+name: Publish ZENIT GARAGE
 
 on:
   push:
-    branches: [gh-pages]
+    branches: [main, gh-pages]
   workflow_dispatch:
 
 permissions:
@@ -22,12 +22,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - name: Adapt asset paths for project hosting
+        run: sed -i 's|/images/|./images/|g' dist/assets/*.js
       - uses: actions/configure-pages@v5
         with:
           enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: dist
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
