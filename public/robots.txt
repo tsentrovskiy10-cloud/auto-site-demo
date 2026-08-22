@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://auto-site-demo.pages.dev/sitemap.xml
