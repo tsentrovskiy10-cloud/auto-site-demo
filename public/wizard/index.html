@@ -10,7 +10,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
-  <style>html,body{overflow-x:hidden}</style>
+  <style>
+    html,body{overflow-x:hidden}
+    .hero-copy,.section-head,.idea-title,.idea-copy,.format-list,.format-list article,.format-list article>div,.contact>div{min-width:0}
+    @media(max-width:540px){
+      .hero{min-height:780px;padding-top:118px}
+      .hero-copy{max-width:100%;padding-top:7vh}
+      .hero h1{font-size:clamp(32px,9.8vw,42px);line-height:1;letter-spacing:-.065em}
+      .hero .lead{font-size:15px;line-height:1.55;margin:28px 0}
+      .hero-art{top:43%;right:-24%;width:96vw;opacity:.2}
+      .hero-art p,.hero-art strong{display:none}
+      .kicker{font-size:9px;letter-spacing:.16em;gap:9px;white-space:normal}
+      .kicker span{width:28px;flex:0 0 28px}
+      .section-head h2,.idea h2,.formats h2,.contact h2{font-size:clamp(31px,9.6vw,42px);line-height:1.02;overflow-wrap:anywhere}
+      .formats h2{font-size:clamp(28px,8.4vw,36px)}
+      .board-copy strong{font-size:clamp(24px,8vw,31px);overflow-wrap:anywhere}
+      .formats{width:100%;min-width:0}
+      .formats .section-head{width:100%;min-width:0}
+      .format-list{width:100%;min-width:0}
+      .format-list article{grid-template-columns:34px minmax(0,1fr);gap:10px;width:100%;min-width:0}
+      .format-list h3{font-size:clamp(17px,5.7vw,22px);line-height:1.15;overflow-wrap:anywhere}
+      .format-list p{font-size:14px;line-height:1.55;overflow-wrap:anywhere}
+      .contact .contact-copy,.contact .contact-copy p{min-width:0;overflow-wrap:anywhere}
+      .contact .button{gap:16px;padding-inline:18px;font-size:13px}
+      footer .brand{max-width:100%}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
