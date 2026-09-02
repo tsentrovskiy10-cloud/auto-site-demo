@@ -35,6 +35,18 @@
       .contact .button{gap:16px;padding-inline:18px;font-size:13px}
       footer .brand{max-width:100%}
       .reveal{opacity:1;transform:none}
+      h1,h2,h3,p,.board-copy strong,.board-copy small,.button{max-width:100%;overflow-wrap:anywhere}
+    }
+    @media(max-width:340px){
+      .hero-art{display:none}
+      .hero{min-height:auto;padding-bottom:70px}
+      .hero h1{font-size:clamp(28px,9.2vw,32px)}
+      .works-board .board-mark{display:none}
+      .works-board{min-height:390px;contain:layout paint}
+      .works-board .board-copy{width:100%}
+      .works-board .board-copy strong{font-size:22px}
+      .formats h2,.contact h2{font-size:clamp(25px,8.3vw,29px)}
+      .contact .button{font-size:12px}
     }
   </style>
 </head>
