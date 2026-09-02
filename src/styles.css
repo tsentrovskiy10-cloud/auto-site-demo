@@ -5,4 +5,13 @@
 .facts{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line);padding:0 5vw}.facts div{padding:44px 25px;border-right:1px solid var(--line)}.facts div:last-child{border:0}.facts strong,.facts span{display:block}.facts strong{font:italic 500 48px 'Cormorant Garamond';color:var(--violet)}.facts span{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}.popular{max-width:1280px;margin:80px auto 0}.popular-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:30px;border:1px solid var(--line)}.popular-grid article{padding:28px;border-right:1px solid var(--line);min-height:180px;display:flex;flex-direction:column}.popular-grid article:last-child{border:0}.popular-grid small{color:var(--violet)}.popular-grid h3{font:500 27px/1.05 'Cormorant Garamond';margin:30px 0 20px}.popular-grid b{font-size:12px;margin-top:auto}
 @media(max-width:900px){.facts{grid-template-columns:repeat(2,1fr);padding:0}.facts div:nth-child(2){border-right:0}.facts div{padding:30px 22px;border-bottom:1px solid var(--line)}.facts strong{font-size:40px}.popular-grid{grid-template-columns:repeat(2,1fr)}.popular-grid article:nth-child(2){border-right:0}.popular-grid article{border-bottom:1px solid var(--line)}}
 @media(max-width:430px){.popular-grid{grid-template-columns:1fr}.popular-grid article{border-right:0}.facts span{font-size:9px}}
+@media(max-width:900px){
+ body.menu-open{overflow:hidden}
+ header{backdrop-filter:none}
+ .mobile{position:fixed;top:0;left:0;width:100vw;height:100dvh;min-height:100vh;overflow-y:auto;overscroll-behavior:contain;background:#171715;isolation:isolate;padding:max(22px,env(safe-area-inset-top)) max(22px,env(safe-area-inset-right)) max(22px,env(safe-area-inset-bottom)) max(22px,env(safe-area-inset-left))}
+ .mobile:before{content:'';position:fixed;inset:0;background:#171715;z-index:-1}
+ .mobile>div{flex:none;margin-bottom:clamp(28px,8vh,64px)}
+ .mobile>button{flex:none;font-size:clamp(34px,11vw,48px);line-height:1;padding:clamp(14px,2.7vh,23px) 4px}
+ .mobile>.pill{flex:none;margin-top:clamp(24px,5vh,46px);min-height:56px}
+}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
