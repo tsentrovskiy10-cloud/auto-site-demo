@@ -109,6 +109,31 @@
   }
   .nav-cta:hover{transform:translateY(-1px); box-shadow:var(--shadow);}
 
+  .menu-btn{
+    display:none; flex-direction:column; justify-content:center; gap:5px;
+    width:40px; height:40px; padding:0; border:1px solid var(--line-strong); border-radius:3px;
+    background:transparent; cursor:pointer; flex:none;
+  }
+  .menu-btn span{display:block; width:18px; height:2px; margin:0 auto; background:var(--paper); transition:transform .25s ease, opacity .25s ease;}
+  .menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .mobile-nav{
+    display:none; flex-direction:column; gap:2px;
+    max-height:0; overflow:hidden; opacity:0;
+    background:var(--ink); border-top:1px solid var(--line);
+    transition:max-height .35s ease, opacity .3s ease;
+  }
+  .mobile-nav.open{max-height:640px; opacity:1;}
+  .mobile-nav a{
+    padding:15px clamp(20px,5vw,64px); text-decoration:none; color:var(--paper);
+    font-size:0.98rem; border-bottom:1px solid var(--line);
+  }
+  .mobile-nav a:active{background:var(--ink-2);}
+  .mobile-nav-actions{display:flex; flex-direction:column; gap:12px; padding:18px clamp(20px,5vw,64px) 24px;}
+  .mobile-nav-actions .btn{width:100%; justify-content:center;}
+
   .hero{position:relative; padding:clamp(52px,9vw,96px) 0 clamp(48px,8vw,80px); border-bottom:1px solid var(--line); overflow:hidden;}
   .hero::before{
     content:""; position:absolute; inset:-30% -10% auto auto; width:65vw; height:65vw; max-width:860px; max-height:860px;
@@ -219,6 +244,31 @@
     .about-grid{grid-template-columns:1fr;}
     .champ-grid{grid-template-columns:1fr;}
     nav.links{display:none;}
+    .nav-phone{display:none;}
+    .menu-btn{display:flex;}
+    .mobile-nav{display:flex;}
+  }
+  @media(max-width:620px){
+    .nav-cta{padding:10px 13px; font-size:0.72rem;}
+    .stat-row{gap:20px 26px;}
+    .price-tags{gap:8px;}
+    .price-tag{padding:9px 12px;}
+    .case-art{aspect-ratio:4/3;}
+  }
+  @media(max-width:480px){
+    .wrap{padding:0 18px;}
+    .nav-row{padding:12px 18px;}
+    .brand img{height:24px;}
+    .hero h1{font-size:clamp(2.3rem,13vw,3rem);}
+    .stat b{font-size:1.6rem;}
+    .quote-pull{font-size:1.15rem; padding:20px;}
+    .section-head{display:block;}
+    .section-head .num{display:block; margin-top:8px;}
+    .rating-row{gap:10px;}
+    .addr-card .line{flex-direction:column; gap:2px;}
+    .addr-card .k{min-width:0;}
+    .hero-cta-row{flex-direction:column;}
+    .hero-cta-row .btn{width:100%; justify-content:center;}
   }
 
   [data-reveal]{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
@@ -246,8 +296,26 @@
     <div class="nav-right">
       <a class="nav-phone" href="tel:+79051301040">+7 905 130-10-40</a>
       <a class="nav-cta" href="https://vk.me/underground_avtozvuk_yaroslavl" target="_blank" rel="noopener">Написать →</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Мобильное меню">
+    <a href="#why">Почему мы</a>
+    <a href="#champ">Опыт</a>
+    <a href="#audio">Автозвук</a>
+    <a href="#sound">Шумоизоляция</a>
+    <a href="#media">Магнитолы</a>
+    <a href="#cameras">Камеры</a>
+    <a href="#light">Подсветка</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#find">Как найти</a>
+    <div class="mobile-nav-actions">
+      <a class="btn btn-line" href="tel:+79051301040">+7 905 130-10-40</a>
+      <a class="btn btn-solid" href="https://vk.me/underground_avtozvuk_yaroslavl" target="_blank" rel="noopener">Написать в сообщество →</a>
+    </div>
+  </nav>
 </header>
 
 <main>
@@ -487,6 +555,26 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileNav = document.getElementById('mobileNav');
+  function closeMenu(){
+    mobileNav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  function toggleMenu(){
+    var open = menuBtn.getAttribute('aria-expanded') === 'true';
+    if (open){ closeMenu(); } else {
+      mobileNav.classList.add('open');
+      menuBtn.setAttribute('aria-expanded','true');
+      document.body.style.overflow='hidden';
+    }
+  }
+  if (menuBtn && mobileNav){
+    menuBtn.addEventListener('click', toggleMenu);
+    mobileNav.addEventListener('click', function(e){ if (e.target.closest('a')) closeMenu(); });
+    addEventListener('keydown', function(e){ if (e.key === 'Escape') closeMenu(); });
+  }
   if ('IntersectionObserver' in window){
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
