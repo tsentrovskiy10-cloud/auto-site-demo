@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MAXimalist Detailing — Brand Book</title>
+<meta name="description" content="Брендбук MAXimalist Detailing — установочный центр детейлинга, тонировки, винила и защитных плёнок, Тольятти.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141a22;
+  --paper:#f7f5f0;
+  --paper-2:#efece3;
+  --red:#e0392c;
+  --orange:#f2994a;
+  --tan:#b07d4f;
+  --tan-dark:#7a4f28;
+  --line:#ddd7c8;
+  --dark:#12161c;
+  --dark-2:#1c222b;
+  --maxw:1220px;
+  --radius:20px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Manrope',ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:600;margin:0;text-transform:uppercase;letter-spacing:.01em;}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--red);font-weight:700;font-family:'Oswald',sans-serif;}
+.section{padding:80px 0;}
+.section-head{margin-bottom:44px;}
+.section-title{font-size:clamp(26px,3.2vw,40px);margin-top:10px;}
+.section-sub{margin:12px 0 0;color:#5a5346;font-size:14.5px;max-width:56ch;line-height:1.6;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:13.5px;border:1px solid transparent;cursor:pointer;font-family:'Oswald',sans-serif;letter-spacing:.03em;text-transform:uppercase;}
+.btn-red{background:linear-gradient(135deg,var(--orange),var(--red));color:#fff;}
+.btn-outline{background:transparent;border-color:var(--ink);color:var(--ink);}
+.btn svg{width:15px;height:15px;}
+
+/* header */
+header{position:sticky;top:0;z-index:80;background:rgba(247,245,240,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 28px;max-width:var(--maxw);margin:0 auto;}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-mark{width:34px;height:34px;flex:0 0 auto;}
+.brand-text{display:flex;flex-direction:column;line-height:1.1;}
+.brand-name{font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;letter-spacing:.02em;}
+.brand-sub{font-size:9px;letter-spacing:.14em;color:#7a7263;font-weight:600;text-transform:uppercase;}
+nav.main-nav{display:flex;gap:20px;}
+nav.main-nav a{font-size:11.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--ink);opacity:.75;font-family:'Oswald',sans-serif;white-space:nowrap;}
+nav.main-nav a:hover{opacity:1;color:var(--red);}
+.menu-btn{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
+.menu-btn span{width:22px;height:2px;background:var(--ink);border-radius:2px;}
+.mobile-nav{display:none;max-height:0;opacity:0;overflow:hidden;transition:max-height .3s ease,opacity .25s ease;background:var(--paper);border-bottom:1px solid var(--line);}
+.mobile-nav.open{max-height:640px;opacity:1;}
+.mobile-nav-in{padding:10px 22px 24px;display:flex;flex-direction:column;}
+.mobile-nav a{padding:13px 4px;font-size:14px;font-weight:700;border-bottom:1px solid var(--line);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;}
+
+/* hero */
+.hero{padding:64px 0 20px;background:
+  radial-gradient(circle at 85% 10%, rgba(224,57,44,.10), transparent 45%),
+  var(--paper);}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;}
+.hero-h1{font-size:clamp(34px,5vw,58px);line-height:1.02;margin:16px 0 18px;}
+.hero-h1 em{font-style:normal;color:var(--red);}
+.hero-p{font-size:15.5px;line-height:1.7;color:#5a5346;max-width:46ch;margin-bottom:26px;}
+.hero-meta{display:flex;gap:26px;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--line);}
+.hero-meta div{display:flex;flex-direction:column;gap:2px;}
+.hero-meta b{font-family:'Oswald',sans-serif;font-size:20px;}
+.hero-meta span{font-size:11px;color:#7a7263;text-transform:uppercase;letter-spacing:.04em;}
+.hero-logo-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:48px;display:flex;align-items:center;justify-content:center;box-shadow:0 30px 60px rgba(20,16,8,.08);}
+.hero-logo-card svg{width:100%;max-width:340px;height:auto;}
+
+/* pillars */
+.pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.pillar-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 22px;}
+.pillar-card .num{font-family:'Oswald',sans-serif;font-size:12px;color:var(--red);font-weight:700;margin-bottom:14px;}
+.pillar-card h3{font-size:16px;margin-bottom:8px;text-transform:none;}
+.pillar-card p{margin:0;font-size:13px;color:#5a5346;line-height:1.55;}
+
+/* logo section */
+.logo-showcase{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:56px;display:flex;align-items:center;justify-content:center;margin-bottom:28px;}
+.logo-showcase svg{width:100%;max-width:300px;height:auto;}
+.logo-showcase.dark{background:var(--dark);}
+.logo-variants-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:44px;}
+.lv-card{border:1px solid var(--line);border-radius:16px;padding:28px;display:flex;flex-direction:column;align-items:center;gap:14px;background:#fff;}
+.lv-card.on-dark{background:var(--dark);}
+.lv-card svg{width:100%;max-width:150px;height:auto;}
+.lv-label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#7a7263;font-weight:700;font-family:'Oswald',sans-serif;}
+.lv-card.on-dark .lv-label{color:#a9a396;}
+
+.clearspace-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:28px;}
+.clearspace-diagram{position:relative;border:1.5px dashed var(--red);border-radius:8px;padding:34px;display:flex;align-items:center;justify-content:center;}
+.clearspace-diagram svg{width:100%;max-width:170px;}
+.clearspace-diagram .x-label{position:absolute;top:6px;left:8px;font-size:10px;color:var(--red);font-weight:700;font-family:'Oswald',sans-serif;}
+.min-size-row{display:flex;align-items:flex-end;gap:22px;}
+.min-size-row svg{height:52px;width:auto;}
+.min-size-row .ms-2 svg{height:30px;}
+
+.dodont-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.dd-card{border-radius:16px;padding:22px;display:flex;flex-direction:column;align-items:center;gap:12px;border:1px solid var(--line);background:#fff;}
+.dd-card svg{width:100%;max-width:110px;height:auto;}
+.dd-mark{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;font-family:'Oswald',sans-serif;text-transform:uppercase;}
+.dd-mark.ok{color:#2f8f4e;}
+.dd-mark.no{color:var(--red);}
+
+/* palette */
+.palette-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+.swatch{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;}
+.swatch .fill{height:96px;}
+.swatch .info{padding:12px 14px;}
+.swatch .name{font-family:'Oswald',sans-serif;font-size:12.5px;font-weight:700;text-transform:uppercase;}
+.swatch .hex{font-size:11px;color:#7a7263;font-family:monospace;margin-top:2px;}
+.swatch .use{font-size:10.5px;color:#7a7263;margin-top:6px;line-height:1.4;}
+
+/* typography */
+.type-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;}
+.type-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:36px;}
+.type-card .label{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--red);font-weight:700;font-family:'Oswald',sans-serif;margin-bottom:16px;}
+.type-sample-h{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(28px,3vw,40px);text-transform:uppercase;line-height:1.05;margin-bottom:8px;}
+.type-sample-b{font-family:'Manrope',sans-serif;font-size:15px;line-height:1.7;color:#3a362c;}
+.type-meta{margin-top:20px;padding-top:16px;border-top:1px dashed var(--line);font-size:11.5px;color:#7a7263;display:flex;gap:18px;flex-wrap:wrap;}
+.weights-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;}
+.weights-row span{font-family:'Oswald',sans-serif;font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;}
+
+/* tone */
+.tone-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px;}
+.tone-card{background:var(--dark);color:#f2ede3;border-radius:18px;padding:24px 22px;}
+.tone-card h3{color:#fff;font-size:15px;margin-bottom:8px;text-transform:none;}
+.tone-card p{margin:0;font-size:12.5px;color:#b8b2a3;line-height:1.55;}
+.tone-example{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.te-card{border-radius:18px;padding:26px 28px;border:1px solid var(--line);}
+.te-card.bad{background:#fff;}
+.te-card.good{background:#fff8f0;border-color:#f0d9c2;}
+.te-label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;font-weight:700;font-family:'Oswald',sans-serif;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.te-card.bad .te-label{color:#9a9484;}
+.te-card.good .te-label{color:var(--red);}
+.te-card p{margin:0;font-size:14px;line-height:1.6;font-family:'Manrope',sans-serif;}
+.te-card.bad p{color:#8a8474;}
+.te-card.good p{color:var(--ink);}
+
+/* products */
+.products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.prod-chip{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 18px;display:flex;flex-direction:column;gap:10px;}
+.prod-chip svg{width:26px;height:26px;color:var(--red);stroke-width:1.5;}
+.prod-chip b{font-family:'Oswald',sans-serif;font-size:13.5px;text-transform:uppercase;}
+.prod-chip span{font-size:11.5px;color:#7a7263;line-height:1.4;}
+
+/* partners */
+.partners-panel{background:var(--dark);color:#f2ede3;border-radius:var(--radius);padding:48px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;}
+.partners-panel h2{color:#fff;font-size:clamp(22px,2.6vw,30px);}
+.partners-panel p{color:#b8b2a3;font-size:14px;line-height:1.65;margin:14px 0 0;}
+.partner-badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;}
+.partner-badges span{border:1px solid rgba(242,237,227,.25);border-radius:999px;padding:9px 18px;font-size:12px;font-weight:700;font-family:'Oswald',sans-serif;letter-spacing:.03em;}
+.guarantee-list{display:flex;flex-direction:column;gap:14px;}
+.guarantee-list div{background:rgba(242,237,227,.06);border:1px solid rgba(242,237,227,.14);border-radius:14px;padding:16px 18px;}
+.guarantee-list b{display:block;font-family:'Oswald',sans-serif;font-size:20px;color:#fff;}
+.guarantee-list span{font-size:11.5px;color:#b8b2a3;}
+
+/* applications */
+.app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.app-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;}
+.app-label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#7a7263;font-weight:700;font-family:'Oswald',sans-serif;margin-bottom:14px;}
+.biz-card-mock{background:var(--dark);border-radius:12px;padding:22px;aspect-ratio:1.75/1;display:flex;flex-direction:column;justify-content:space-between;}
+.biz-card-mock svg{width:44px;height:44px;}
+.biz-card-mock .bc-info{font-size:9.5px;color:#b8b2a3;line-height:1.6;font-family:'Manrope',sans-serif;}
+.biz-card-mock .bc-info b{color:#fff;font-family:'Oswald',sans-serif;font-size:11px;display:block;letter-spacing:.03em;}
+.social-mock{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;aspect-ratio:1/1;position:relative;background:linear-gradient(160deg,var(--dark),#2a1810);display:flex;align-items:center;justify-content:center;}
+.social-mock svg{width:60%;}
+.decal-mock{background:linear-gradient(180deg,#c9cfd6,#8b929b);border-radius:12px;aspect-ratio:1.6/1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.decal-mock:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.35),transparent 40%);}
+.decal-mock svg{width:70%;position:relative;z-index:1;}
+
+/* contacts */
+.contacts-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;}
+.contact-list{display:flex;flex-direction:column;gap:16px;}
+.contact-row{display:flex;gap:14px;align-items:flex-start;font-size:13.5px;}
+.contact-row b{display:block;font-family:'Oswald',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--red);margin-bottom:2px;}
+.contact-row svg{color:var(--red);flex:0 0 auto;margin-top:2px;width:18px;height:18px;}
+.brand-family{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;}
+.brand-family h4{font-family:'Oswald',sans-serif;font-size:13px;text-transform:uppercase;margin-bottom:12px;}
+.bf-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line);font-size:12.5px;}
+.bf-row:last-child{border-bottom:none;}
+.bf-row b{font-weight:700;}
+footer{padding:32px 0 44px;text-align:center;font-size:11.5px;color:#9a9484;}
+
+[data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
+[data-reveal].in{opacity:1;transform:none;}
+
+@media (max-width:980px){
+  .wrap{padding:0 20px;}
+  nav.main-nav{display:none;}
+  .menu-btn{display:flex;}
+  .header-in{padding:12px 20px;}
+  .mobile-nav{display:block;}
+  .hero-grid{grid-template-columns:1fr;gap:30px;}
+  .hero-logo-card{order:-1;padding:32px;}
+  .section{padding:52px 0;}
+  .pillars-grid{grid-template-columns:1fr 1fr;}
+  .logo-variants-grid{grid-template-columns:1fr 1fr;}
+  .clearspace-box{grid-template-columns:1fr;}
+  .dodont-grid{grid-template-columns:1fr 1fr;}
+  .palette-grid{grid-template-columns:1fr 1fr;}
+  .type-grid{grid-template-columns:1fr;}
+  .tone-grid{grid-template-columns:1fr 1fr;}
+  .tone-example{grid-template-columns:1fr;}
+  .products-grid{grid-template-columns:1fr 1fr;}
+  .partners-panel{grid-template-columns:1fr;padding:32px 24px;}
+  .app-grid{grid-template-columns:1fr;}
+  .contacts-grid{grid-template-columns:1fr;}
+}
+@media (max-width:560px){
+  .pillars-grid{grid-template-columns:1fr;}
+  .logo-variants-grid{grid-template-columns:1fr;}
+  .dodont-grid{grid-template-columns:1fr;}
+  .palette-grid{grid-template-columns:1fr 1fr;}
+  .tone-grid{grid-template-columns:1fr;}
+  .products-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== reusable logo SVG (defs referenced via <use>) ===== -->
+<svg width="0" height="0" style="position:absolute;">
+<defs>
+<symbol id="logoMark" viewBox="0 0 200 200">
+  <circle cx="100" cy="112" r="58" fill="#b07d4f"/>
+  <path d="M52 96 C40 70 55 40 85 34 C80 46 82 54 90 58 C82 60 74 68 72 80 Z" fill="#7a4f28"/>
+  <path d="M70 50 C66 34 78 18 96 16 C90 28 92 38 100 44 C90 44 78 46 70 50Z" fill="#7a4f28"/>
+  <path d="M96 40 C98 24 114 12 132 14 C122 24 120 34 126 42 C116 40 104 38 96 40Z" fill="#7a4f28"/>
+  <path d="M122 46 C130 32 148 28 162 36 C150 40 144 48 146 58 C136 52 128 48 122 46Z" fill="#7a4f28"/>
+  <path d="M138 62 C150 54 168 58 176 72 C164 70 156 74 154 84 C148 74 142 66 138 62Z" fill="#7a4f28"/>
+  <ellipse cx="76" cy="118" rx="10" ry="13" fill="#f7f5f0"/>
+  <circle cx="73" cy="116" r="4.2" fill="#141a22"/>
+  <path d="M58 132 Q76 146 96 132" stroke="#141a22" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <rect x="118" y="60" width="16" height="34" rx="6" fill="#e0392c" transform="rotate(18 126 77)"/>
+  <rect x="112" y="52" width="10" height="16" rx="3" fill="#dcdcdc" transform="rotate(18 117 60)"/>
+  <path d="M132 58 l14 -10 M136 64 l16 -6" stroke="#e0392c" stroke-width="3" stroke-linecap="round"/>
+</symbol>
+<symbol id="logoMono" viewBox="0 0 200 200">
+  <circle cx="100" cy="112" r="58" fill="currentColor" opacity=".9"/>
+  <path d="M52 96 C40 70 55 40 85 34 C80 46 82 54 90 58 C82 60 74 68 72 80 Z" fill="currentColor"/>
+  <path d="M70 50 C66 34 78 18 96 16 C90 28 92 38 100 44 C90 44 78 46 70 50Z" fill="currentColor"/>
+  <path d="M96 40 C98 24 114 12 132 14 C122 24 120 34 126 42 C116 40 104 38 96 40Z" fill="currentColor"/>
+  <path d="M122 46 C130 32 148 28 162 36 C150 40 144 48 146 58 C136 52 128 48 122 46Z" fill="currentColor"/>
+  <path d="M138 62 C150 54 168 58 176 72 C164 70 156 74 154 84 C148 74 142 66 138 62Z" fill="currentColor"/>
+  <ellipse cx="76" cy="118" rx="10" ry="13" fill="#fff" opacity=".9"/>
+  <rect x="118" y="60" width="16" height="34" rx="6" fill="#fff" opacity=".55" transform="rotate(18 126 77)"/>
+</symbol>
+<symbol id="wordmark" viewBox="0 0 340 70">
+  <text x="0" y="30" font-family="Oswald, sans-serif" font-weight="700" font-size="26" letter-spacing="2" fill="#141a22">DETAILING</text>
+  <text x="0" y="62" font-family="Oswald, sans-serif" font-weight="700" font-size="34" letter-spacing="0.5" fill="#e0392c">MAX<tspan fill="#141a22">imalist</tspan></text>
+</symbol>
+</defs>
+</svg>
+
+<header>
+  <div class="header-in">
+    <a class="brand" href="#top" onclick="location.reload(); return false;">
+      <svg class="brand-mark" viewBox="0 0 200 200"><use href="#logoMark"/></svg>
+      <span class="brand-text">
+        <span class="brand-name">MAXimalist Detailing</span>
+        <span class="brand-sub">Brand Book</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="#logo">Логотип</a>
+      <a href="#palette">Палитра</a>
+      <a href="#type">Шрифты</a>
+      <a href="#tone">Тон</a>
+      <a href="#products">Услуги</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-in">
+      <a href="#logo">Логотип</a>
+      <a href="#palette">Палитра</a>
+      <a href="#type">Шрифты</a>
+      <a href="#tone">Тон коммуникации</a>
+      <a href="#products">Услуги</a>
+      <a href="#contacts">Контакты</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div data-reveal>
+        <div class="hero-eyebrow"><span class="eyebrow">Brand Book · v1.0</span></div>
+        <h1 class="hero-h1">MAXimalist<br><em>Detailing</em></h1>
+        <p class="hero-p">Установочный центр детейлинга, тонировки, винила и защитных плёнок. Технологичная защита кузова и внимание к каждой детали — под узнаваемым характером бренда с 2004 года.</p>
+        <div class="hero-meta">
+          <div><b>Тольятти</b><span>город присутствия</span></div>
+          <div><b>2004</b><span>работаем с этого года</span></div>
+          <div><b>348+</b><span>подписчиков ВК</span></div>
+          <div><b>3</b><span>точки в городе</span></div>
+        </div>
+      </div>
+      <div class="hero-logo-card" data-reveal>
+        <svg viewBox="-15 0 230 260">
+          <use href="#logoMark" x="0" y="0" width="200" height="200"/>
+          <use href="#wordmark" x="-15" y="205" width="230" height="48"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="essence">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Суть бренда</div>
+        <h2 class="section-title">Технично. Прямо. По-соседски.</h2>
+        <p class="section-sub">Четыре принципа, которые отличают MAXimalist от типового автосервиса — выведены из реальной подачи бренда в сообществе и переписке с клиентами.</p>
+      </div>
+      <div class="pillars-grid" data-reveal>
+        <div class="pillar-card">
+          <div class="num">01</div>
+          <h3>Технологичная защита</h3>
+          <p>Плёнки, прошедшие проверку сроком от 10 лет, раскрой на плоттере по точным лекалам, гарантия на работу 1 год.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="num">02</div>
+          <h3>Внимание к деталям</h3>
+          <p>Каждая деталь кузова оклеивается без ручной резки по авто — только выверенные, готовые шаблоны.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="num">03</div>
+          <h3>Дружелюбный характер</h3>
+          <p>Технически сложный сервис становится понятным и располагающим благодаря узнаваемому персонажу-ежу в лого.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="num">04</div>
+          <h3>Локальная экспертиза</h3>
+          <p>Материалы подобраны с учётом климата средней полосы Поволжья — не универсальный, а инженерный подход.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="logo" style="background:var(--paper-2);">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Логотип</div>
+        <h2 class="section-title">Знак и логотип</h2>
+        <p class="section-sub">Основа фирменного стиля — персонаж-ёж с пульверизатором как метафора ухода за автомобилем, и двухуровневый шрифтовой блок DETAILING / MAXimalist.</p>
+      </div>
+
+      <div class="logo-variants-grid" data-reveal>
+        <div class="lv-card">
+          <svg viewBox="-15 0 230 260"><use href="#logoMark" width="200" height="200"/><use href="#wordmark" x="-15" y="205" width="230" height="48"/></svg>
+          <span class="lv-label">Основной вариант</span>
+        </div>
+        <div class="lv-card on-dark">
+          <svg viewBox="0 0 200 200"><use href="#logoMark" width="200" height="200"/></svg>
+          <span class="lv-label">Знак отдельно</span>
+        </div>
+        <div class="lv-card">
+          <svg viewBox="0 0 200 200" style="color:#141a22;"><use href="#logoMono" width="200" height="200"/></svg>
+          <span class="lv-label">Монохромная версия</span>
+        </div>
+      </div>
+
+      <div class="clearspace-box" data-reveal>
+        <div class="clearspace-diagram">
+          <span class="x-label">X</span>
+          <svg viewBox="0 0 200 200"><use href="#logoMark" width="200" height="200"/></svg>
+        </div>
+        <div>
+          <h3 style="font-size:16px;margin-bottom:10px;">Охранное поле и минимальный размер</h3>
+          <p style="font-size:13.5px;color:#5a5346;line-height:1.6;margin-bottom:20px;">Свободное пространство вокруг знака — не менее X (высота одной иглы ежа). Ничто не должно попадать в эту зону: текст, другие логотипы, край макета.</p>
+          <div class="min-size-row">
+            <div><svg viewBox="0 0 200 200"><use href="#logoMark" width="200" height="200"/></svg><div style="font-size:10.5px;color:#7a7263;margin-top:6px;">от 28px — digital</div></div>
+            <div class="ms-2"><svg viewBox="0 0 200 200"><use href="#logoMark" width="200" height="200"/></svg><div style="font-size:10.5px;color:#7a7263;margin-top:6px;">от 15мм — печать</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dodont-grid" data-reveal>
+        <div class="dd-card">
+          <svg viewBox="0 0 200 200"><use href="#logoMark" width="200" height="200"/></svg>
+          <span class="dd-mark ok">✓ Верно</span>
+        </div>
+        <div class="dd-card">
+          <svg viewBox="0 0 200 200" style="transform:scaleX(1.5);"><use href="#logoMark" width="200" height="200"/></svg>
+          <span class="dd-mark no">✕ Не растягивать</span>
+        </div>
+        <div class="dd-card" style="background:#3a2a1a;">
+          <svg viewBox="0 0 200 200"><use href="#logoMark" width="200" height="200"/></svg>
+          <span class="dd-mark no">✕ Не менять фон произвольно</span>
+        </div>
+        <div class="dd-card">
+          <svg viewBox="0 0 200 200" style="filter:drop-shadow(6px 8px 0 rgba(0,0,0,.35));"><use href="#logoMark" width="200" height="200"/></svg>
+          <span class="dd-mark no">✕ Не добавлять эффекты</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="palette">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Цвет</div>
+        <h2 class="section-title">Цветовая палитра</h2>
+        <p class="section-sub">Палитра собрана из реального лого и айдентики MAXimalist: тёплый персонаж, технологичный красно-оранжевый акцент и глубокий графитовый для текста.</p>
+      </div>
+      <div class="palette-grid" data-reveal>
+        <div class="swatch">
+          <div class="fill" style="background:#e0392c;"></div>
+          <div class="info"><div class="name">MAX Red</div><div class="hex">#E0392C</div><div class="use">Акценты, CTA, пульверизатор</div></div>
+        </div>
+        <div class="swatch">
+          <div class="fill" style="background:#f2994a;"></div>
+          <div class="info"><div class="name">Detail Orange</div><div class="hex">#F2994A</div><div class="use">Градиенты, подсветки</div></div>
+        </div>
+        <div class="swatch">
+          <div class="fill" style="background:#141a22;"></div>
+          <div class="info"><div class="name">Graphite Ink</div><div class="hex">#141A22</div><div class="use">Заголовки, текст DETAILING</div></div>
+        </div>
+        <div class="swatch">
+          <div class="fill" style="background:#b07d4f;"></div>
+          <div class="info"><div class="name">Hedgehog Tan</div><div class="hex">#B07D4F</div><div class="use">Иллюстрации, персонаж</div></div>
+        </div>
+        <div class="swatch">
+          <div class="fill" style="background:#f7f5f0;border-bottom:1px solid var(--line);"></div>
+          <div class="info"><div class="name">Paper</div><div class="hex">#F7F5F0</div><div class="use">Фон, светлые макеты</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="type" style="background:var(--paper-2);">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Типографика</div>
+        <h2 class="section-title">Шрифтовая пара</h2>
+        <p class="section-sub">Плотный акцидентный шрифт для заголовков — в духе шрифтового блока логотипа — и нейтральный гротеск для основного текста.</p>
+      </div>
+      <div class="type-grid" data-reveal>
+        <div class="type-card">
+          <div class="label">Заголовки — Oswald</div>
+          <div class="type-sample-h">ТОНИРОВКА<br>ВИНИЛ · ПОЛИРОВКА</div>
+          <div class="weights-row">
+            <span style="font-weight:500;">Medium</span>
+            <span style="font-weight:600;">SemiBold</span>
+            <span style="font-weight:700;">Bold</span>
+          </div>
+          <div class="type-meta"><span>Кегль заголовков: 24–56px</span><span>Трекинг: +1–2%</span><span>Регистр: ВЕРХНИЙ</span></div>
+        </div>
+        <div class="type-card">
+          <div class="label">Текст — Manrope</div>
+          <p class="type-sample-b">«Все плёнки, которые мы используем, прошли проверку минимум в 10-летний срок в нашей средней поволжской полосе. Гарантия на работу — 1 год.»</p>
+          <div class="weights-row">
+            <span style="font-weight:400;">Regular</span>
+            <span style="font-weight:600;">SemiBold</span>
+            <span style="font-weight:800;">ExtraBold</span>
+          </div>
+          <div class="type-meta"><span>Кегль текста: 13–16px</span><span>Межстрочный: 1.6–1.7</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tone">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Тон коммуникации</div>
+        <h2 class="section-title">Как бренд говорит</h2>
+        <p class="section-sub">Голос собран из реальной переписки и постов сообщества — без вымышленных формулировок.</p>
+      </div>
+      <div class="tone-grid" data-reveal>
+        <div class="tone-card"><h3>Технично</h3><p>Конкретные материалы, сроки и цифры вместо общих слов: «плоттер», «10-летний тест», «гарантия 1 год».</p></div>
+        <div class="tone-card"><h3>Прямо</h3><p>Короткие предложения по делу. Никакой воды — клиент сразу видит суть услуги и выгоду.</p></div>
+        <div class="tone-card"><h3>По-дружески</h3><p>Уместные emoji (🙂 👍 🤝) и характер ежа-маскота смягчают технический разговор.</p></div>
+        <div class="tone-card"><h3>По-соседски</h3><p>Упоминание района, климата средней полосы, реальных марок авто — «свой» сервис в Тольятти.</p></div>
+      </div>
+      <div class="tone-example" data-reveal>
+        <div class="te-card bad">
+          <div class="te-label">Не в тоне бренда</div>
+          <p>«Мы предлагаем широкий спектр премиальных решений для вашего автомобиля любого класса и бюджета.»</p>
+        </div>
+        <div class="te-card good">
+          <div class="te-label">В тоне бренда</div>
+          <p>«Granta — народный авто, но защитить его внешний вид можно надолго: плёнка режется на плоттере по идеальным лекалам, без единого прикосновения ножа к кузову.»</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="products" style="background:var(--paper-2);">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Линейка услуг</div>
+        <h2 class="section-title">Направления бренда</h2>
+      </div>
+      <div class="products-grid" data-reveal>
+        <div class="prod-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>
+          <b>Тонировка</b><span>В т.ч. автоматическая, пакеты «2 стекла»</span>
+        </div>
+        <div class="prod-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 17c4-10 12-10 16 0"/><path d="M4 17h16"/></svg>
+          <b>Виниловая оклейка</b><span>Полная и частичная оклейка кузова</span>
+        </div>
+        <div class="prod-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+          <b>Полировка</b><span>Восстановление и защита ЛКП</span>
+        </div>
+        <div class="prod-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7Z"/></svg>
+          <b>Защитные плёнки</b><span>PPF, антигравийная защита — LLumar, PremiumShield</span>
+        </div>
+        <div class="prod-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+          <b>Сигнализации</b><span>Установка охранных комплексов</span>
+        </div>
+        <div class="prod-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0Z"/><path d="M12 7v5l3 3"/></svg>
+          <b>Шумоизоляция</b><span>Комплексная и точечная</span>
+        </div>
+        <div class="prod-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h16l-2 14H6Z"/><path d="M9 9v6M15 9v6"/></svg>
+          <b>Автомойка MAXshine</b><span>Отдельная точка, Автозаводское шоссе</span>
+        </div>
+        <div class="prod-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s-7-6.1-7-11.3A7 7 0 0119 9.7C19 15 12 21 12 21z"/></svg>
+          <b>Установочный центр</b><span>3 точки обслуживания в Тольятти</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="partners">
+    <div class="wrap">
+      <div class="partners-panel" data-reveal>
+        <div>
+          <div class="eyebrow" style="color:var(--orange);">Партнёры и гарантии</div>
+          <h2>Материалы, которым доверяют</h2>
+          <p>Работа строится на плёнках проверенных мировых брендов — это часть бренд-обещания MAXimalist: не экономить на материале, который защищает автомобиль годами.</p>
+          <div class="partner-badges">
+            <span>LLumar Window Film</span>
+            <span>PremiumShield</span>
+          </div>
+        </div>
+        <div class="guarantee-list">
+          <div><b>10 лет</b><span>минимальный проверенный срок службы плёнок в регионе</span></div>
+          <div><b>1 год</b><span>гарантия на выполненную работу</span></div>
+          <div><b>2004</b><span>год начала работы центра</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="applications" style="background:var(--paper-2);">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Применение</div>
+        <h2 class="section-title">Логотип в носителях</h2>
+        <p class="section-sub">Примеры того, как знак и палитра работают в реальных форматах — визитка, публикация в сообществе, наклейка на авто.</p>
+      </div>
+      <div class="app-grid" data-reveal>
+        <div class="app-card">
+          <div class="app-label">Визитка</div>
+          <div class="biz-card-mock">
+            <svg viewBox="0 0 200 200" style="color:#fff;"><use href="#logoMono" width="200" height="200"/></svg>
+            <div class="bc-info"><b>MAXimalist Detailing</b>Хрящевское шоссе, 11, Тольятти<br>+7 927 794-79-98</div>
+          </div>
+        </div>
+        <div class="app-card">
+          <div class="app-label">Пост в сообществе</div>
+          <div class="social-mock">
+            <svg viewBox="-15 0 230 260"><use href="#logoMark" width="200" height="200"/><use href="#wordmark" x="-15" y="205" width="230" height="48" style="filter:brightness(0) invert(1);"/></svg>
+          </div>
+        </div>
+        <div class="app-card">
+          <div class="app-label">Наклейка на авто</div>
+          <div class="decal-mock">
+            <svg viewBox="0 0 200 200"><use href="#logoMark" width="200" height="200"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacts">
+    <div class="wrap">
+      <div class="contacts-grid" data-reveal>
+        <div>
+          <div class="eyebrow">Контакты</div>
+          <h2 class="section-title">Реквизиты бренда</h2>
+          <div class="contact-list" style="margin-top:26px;">
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.1-7-11.3A7 7 0 0119 9.7C19 15 12 21 12 21z"/></svg>
+              <div><b>Адрес</b>Хрящевское шоссе, 11, Тольятти (+ 2 точки в городе)</div>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c0 8.284 6.716 15 15 15l2-4-6-2-2 2c-2.5-1-4.5-3-5.5-5.5l2-2-2-6-4 2Z"/></svg>
+              <div><b>Установочный центр</b>+7 927 794-79-98</div>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c0 8.284 6.716 15 15 15l2-4-6-2-2 2c-2.5-1-4.5-3-5.5-5.5l2-2-2-6-4 2Z"/></svg>
+              <div><b>MAXshine — автомойка</b>+7 937 658-51-55</div>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 3v3M16 3v3"/></svg>
+              <div><b>Сайт</b>maximalist163.ru</div>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 3v3M16 3v3"/></svg>
+              <div><b>Сообщество ВК</b>vk.com/maximalist163</div>
+            </div>
+          </div>
+        </div>
+        <div class="brand-family">
+          <h4>Семья брендов MAXimalist</h4>
+          <div class="bf-row"><span>MAXimalist163</span><b>тонировка · винил · полировка</b></div>
+          <div class="bf-row"><span>MAXimalist Detailing</span><b>детейлинг · защитные плёнки</b></div>
+          <div class="bf-row"><span>MAXshine</span><b>автомойка</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">MAXimalist Detailing — Brand Book v1.0 · Тольятти · составлено на основе реального сообщества vk.com/maximalist163 и переписки с Максимом</div>
+</footer>
+
+<script>
+var menuBtn = document.getElementById('menuBtn');
+var mobileNav = document.getElementById('mobileNav');
+menuBtn.addEventListener('click', function(){
+  var open = mobileNav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+mobileNav.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click', function(){
+    mobileNav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  });
+});
+var revealEls = document.querySelectorAll('[data-reveal]');
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+}, {threshold:.1});
+revealEls.forEach(function(el){ io.observe(el); });
+</script>
+
+</body>
+</html>
